@@ -1,0 +1,47 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#nav {
+    font-size: 20px;
+    max-width: 200px;
+    border-radius: 20px;
+    height: 100%;
+}
+
+li {
+    list-style: none;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 800ms;
+    margin-bottom: 5px;
+}
+
+ul {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+ #container {
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+ }
+
+ li:hover {
+    background-color: gray;
+    
+ }
+
+ #routlet {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+}

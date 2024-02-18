@@ -1,0 +1,20 @@
+<h1>Exercice 9</h1>
+<h2>*ngFor - Classes</h2>
+<b>Employees:</b>
+<table class="table-bordered table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let e of employeesWithOrderCriteria">
+    <td>{{ e.name }}</td>
+    <td>{{ e.position }}</td>
+    <td>{{ e.salary }}</td>
+  </tr>
+</table>
+<div id="buttons">
+  <button (click)="sortSalary()">Order by salary</button>
+  <button (click)="sortPosition()">Order by position</button>
+  <button (click)="sortName()">Order by name</button>
+</div>

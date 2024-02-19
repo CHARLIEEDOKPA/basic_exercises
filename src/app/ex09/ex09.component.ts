@@ -21,22 +21,22 @@ export class Ex09Component {
     console.log(EMPLOYEE_LIST);
   }
 
+  sort(key:keyof Employee){
+    this.employeesWithOrderCriteria = this.employees.sort((a,b) => {
+     let aValue = a[key]
+     let bValue = b[key]
+     
+      if(typeof aValue === "number" && typeof bValue === "number" ) {
+        return bValue - aValue
 
-  sortSalary() {
-    this.employeesWithOrderCriteria = this.employees.sort(
-      (a, b) => b.salary - a.salary
-    );
+      } else {
+        let aString =  String(aValue)
+        let bString = String(bValue)
+
+        return aString.localeCompare(bString)
+      }
+
+    })
   }
 
-  sortName() {
-    this.employeesWithOrderCriteria = this.employees.sort((a, b) => 
-      a.name > b.name? 1:a.name < b.name ? -1:0
-    );
-  }
-
-  sortPosition() {
-
-      this.employeesWithOrderCriteria = this.employees.sort((a, b) => 
-      a.position > b.position? 1:a.position < b.position ? -1:0);
-  }
 }
